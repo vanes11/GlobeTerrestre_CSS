@@ -1,0 +1,46 @@
+body{
+    background-image:radial-gradient(circle at 100px 100px, #000, #000);
+  
+}
+
+#globe{
+    position: relative;
+/*   configuration des  dimensions etde l'espacement*/
+    
+    width: 300px;
+    height: 300px;
+    margin: 11em auto;
+    
+/*    preparation de l'animation*/
+    
+    transition: transform 200ms linear;
+    animation: rotate 4s linear infinite ; 
+    
+/* Ajustez l'apparence et donnez-lui un joli arrière-plan, c'est-à-dire la carte du monde       */
+    
+    color:#000;
+    border-radius: 50%;
+    background: url(Images/Globe.jpeg) 0 0 repeat ;
+    box-shadow: inset 20px 0 80px 6px rgba(0,0,0,1);
+        
+/*Positionnez les choses dans un espace 3D*/
+/* transform: preserve-3d permet de forcer les elements imbriques a subir les transforamations 3D lorsque le parent est transfprmer*/
+    
+    transform: preserve-3d;      
+}
+
+
+/*The animation*/
+@keyframes rotate{
+    0% {background-position: 0 0;}
+    100%{background-position: 630px 0;}
+}
+
+p{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
